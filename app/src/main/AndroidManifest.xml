@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/welcome"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31"
+        android:label="OceanBite">
+
+        <!-- LoginActivity -->
+        <activity android:name=".LoginActivity" android:exported="true" />
+
+        <!-- WelcomeActivity as launcher -->
+        <activity android:name=".WelcomeActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- PaymentActivity -->
+        <activity android:name=".PaymentActivity" android:exported="false" />
+
+        <!-- MainActivity -->
+        <activity android:name=".MainActivity" android:exported="true" />
+
+        <!-- DetailActivity -->
+        <activity android:name=".DetailActivity" android:exported="false" />
+
+        <!-- OrderActivity -->
+        <activity android:name=".OrderActivity" android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+</manifest>

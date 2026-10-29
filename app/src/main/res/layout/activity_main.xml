@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Toolbar with fish logo and centered icons -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <!-- Fish logo on left -->
+            <ImageView
+                android:id="@+id/toolbarLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/chef1"
+                android:contentDescription="Logo"
+                android:layout_marginStart="8dp" />
+
+            <!-- Centered icons -->
+            <LinearLayout
+                android:id="@+id/iconContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_home_24"
+                    android:contentDescription="Home"
+
+                    android:layout_marginEnd="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnOrders"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_shopping_cart_checkout_24"
+                    android:contentDescription="My Orders"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Search Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search..."
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawableTint="#F30F5473"
+            android:drawableTintMode="src_in"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TabLayout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/colorPrimary"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextColor="@android:color/white"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextAppearance="@style/CustomTabText" />
+
+    <!-- ViewPager2 -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

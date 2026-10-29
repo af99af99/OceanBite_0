@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.FOODORDERAPP" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Toolbar text & icon color -->
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.FOODORDERAPP" parent="Base.Theme.FOODORDERAPP" />
+</resources>
